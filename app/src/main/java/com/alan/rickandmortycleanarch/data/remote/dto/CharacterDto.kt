@@ -11,11 +11,11 @@ data class CharacterDto(
 )
 
 fun CharacterDto.toCharacters(): List<Character> {
-    return results.map {
+    return results.map { character ->
         Character(
-            name = it.name,
-            image = it.image,
-            gender = it.gender
+            name = character.name,
+            image = character.image,
+            gender = character.gender
         )
     }
 }
